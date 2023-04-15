@@ -1,0 +1,30 @@
+heartbeat.monitors:
+- type: http
+  id: service-example1
+  name: Service Status example 1
+  service.name: example-1
+  hosts: ["http://example.com"]
+  check.response.status: [200]
+  schedule: '@every 5s'
+
+- type: http
+  id: service-example2
+  name: Service Status example 2
+  service.name: example-2
+  hosts: ["http://example2.com"]
+  check.response.status: [200]
+  schedule: '@every 5s'  
+
+- type: http
+  id: service-example3
+  name: Service Status example 3
+  service.name: example-3
+  hosts: ["http://example3.com"]
+  check.response.status: [200]
+  schedule: '@every 5s'
+
+heartbeat.scheduler:
+  limit: 10
+
+output.logstash:
+  hosts: ["logstash:5044"]
