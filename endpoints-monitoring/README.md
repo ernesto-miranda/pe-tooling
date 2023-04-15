@@ -8,6 +8,7 @@ What things you need to install the software and how to install them
 
 Docker
 Docker Compose
+
 ## Installing
 A step by step series of examples that tell you how to get a development env running
 
